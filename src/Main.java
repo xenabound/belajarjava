@@ -1,3 +1,4 @@
+import connection.DatabaseConnection;
 import entity.User;
 import service.BasicCRUD;
 
@@ -18,7 +19,6 @@ public class Main {
             System.out.println("KEY : "+map.getKey() +" VALUE : "+map.getValue());
         }
 
-        System.out.println("DATA USER : "+crud.getDataByIndex(0));
+        DatabaseConnection.getInstance().getConnection();
     }
-
 }
